@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PackStyle</title>
+
+    <meta name="description" content="PackStyle - Figurinhas para Stories">
+    <meta name="theme-color" content="#F7B7D2">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- iPhone -->
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+
+<body>
+
+<header class="topo">
+
+    <div class="logo">
+
+        <img src="icons/logo.png" alt="PackStyle">
+
+        <div>
+
+            <h1>PackStyle</h1>
+
+            <span>Figurinhas para Stories</span>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="pesquisa">
+
+    <input
+        type="search"
+        id="searchInput"
+        placeholder="Pesquisar figurinhas...">
+
+</section>
+
+
+<section
+    id="categories"
+    class="categorias">
+
+    <!-- Categorias carregadas pelo JSON -->
+
+</section>
+
+
+
+<main
+    id="stickersContainer"
+    class="stickers">
+
+    <!-- Cards das figurinhas -->
+
+</main>
+
+
+
+<nav class="bottomBar">
+
+    <button id="homeBtn">
+
+        <span>🏠</span>
+
+        <small>Home</small>
+
+    </button>
+
+    <button id="favoritesBtn">
+
+        <span>❤️</span>
+
+        <small>Favoritos</small>
+
+    </button>
+
+    <button id="settingsBtn">
+
+        <span>⚙️</span>
+
+        <small>Configurações</small>
+
+    </button>
+
+</nav>
+
+
+
+<div
+    id="modal"
+    class="modal">
+
+    <div class="modalBox">
+
+        <button id="closeModal">
+
+            ✕
+
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Figurinha">
+
+        <div class="modalButtons">
+
+            <button id="copyButton">
+
+                Copiar
+
+            </button>
+
+            <button id="favoriteButton">
+
+                Favoritar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div
+    id="toast"
+    class="toast">
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
