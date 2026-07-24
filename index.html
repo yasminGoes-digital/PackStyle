@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PackStyle</title>
+
+    <meta name="description" content="PackStyle - Figurinhas para Stories do Instagram">
+    <meta name="theme-color" content="#F7B6D2">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="header-logo">
+
+        <img
+            src="icons/logo.png"
+            alt="PackStyle">
+
+        <div>
+
+            <h1>PackStyle</h1>
+
+            <p>Figurinhas para Stories</p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<section class="search-area">
+
+    <input
+        id="searchInput"
+        type="search"
+        placeholder="Pesquisar figurinhas...">
+
+</section>
+
+
+
+<section
+    id="categories"
+    class="categories">
+
+</section>
+
+
+
+<main
+    id="stickersContainer"
+    class="stickers-grid">
+
+</main>
+
+
+
+<nav class="bottom-navigation">
+
+    <button
+        id="homeButton"
+        class="nav-button active">
+
+        <span>🏠</span>
+
+        <small>Home</small>
+
+    </button>
+
+    <button
+        id="favoritesButton"
+        class="nav-button">
+
+        <span>❤</span>
+
+        <small>Favoritos</small>
+
+    </button>
+
+    <button
+        id="settingsButton"
+        class="nav-button">
+
+        <span>⚙</span>
+
+        <small>Configurações</small>
+
+    </button>
+
+</nav>
+
+
+
+<div
+    id="modal"
+    class="modal">
+
+    <div class="modal-content">
+
+        <button
+            id="closeModal"
+            class="close-button">
+
+            ✕
+
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Figurinha">
+
+        <h2 id="modalTitle"></h2>
+
+        <div class="modal-actions">
+
+            <button
+                id="copySticker">
+
+                Copiar
+
+            </button>
+
+            <button
+                id="favoriteSticker">
+
+                Favoritar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div
+    id="toast"
+    class="toast">
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
