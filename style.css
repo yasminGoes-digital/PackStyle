@@ -1,0 +1,904 @@
+/* ==========================================================
+   PACKSTYLE
+   STYLE.CSS
+   Parte 1
+   ========================================================== */
+
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* VARIÁVEIS */
+
+:root{
+
+    --rosa-claro:#FFEAF3;
+    --rosa:#F8B7D4;
+    --rosa-medio:#F28CB5;
+    --rosa-escuro:#E25D96;
+
+    --branco:#FFFFFF;
+
+    --cinza:#6C6C6C;
+
+    --texto:#333333;
+
+    --sombra:0 8px 25px rgba(0,0,0,.08);
+
+    --borda:22px;
+
+    --transicao:.30s;
+
+}
+
+
+
+/* BODY */
+
+body{
+
+    background:linear-gradient(
+        180deg,
+        #FFF8FB,
+        #FFF0F7
+    );
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+    color:var(--texto);
+
+    min-height:100vh;
+
+    padding-bottom:95px;
+
+}
+
+
+
+/* HEADER */
+
+.header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+    background:white;
+
+    padding:18px;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+
+.header-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.header-logo img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+}
+
+
+
+.header-logo h1{
+
+    font-size:28px;
+
+    color:var(--rosa-escuro);
+
+}
+
+
+
+.header-logo p{
+
+    color:var(--cinza);
+
+    font-size:14px;
+
+}
+
+
+
+/* PESQUISA */
+
+.search-area{
+
+    padding:20px;
+
+}
+
+
+
+.search-area input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:white;
+
+    font-size:16px;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transicao);
+
+}
+
+
+
+.search-area input:focus{
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* CATEGORIAS */
+
+.categories{
+
+    display:flex;
+
+    gap:12px;
+
+    overflow-x:auto;
+
+    padding:0 20px 20px;
+
+    scrollbar-width:none;
+
+}
+
+
+
+.categories::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+.category{
+
+    background:white;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:12px 20px;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transicao);
+
+    font-weight:600;
+
+}
+
+
+
+.category:hover{
+
+    background:var(--rosa);
+
+}
+
+
+
+.category.active{
+
+    background:var(--rosa-escuro);
+
+    color:white;
+
+}
+
+
+
+/* GRID */
+
+.stickers-grid{
+
+    padding:20px;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(
+        auto-fill,
+        minmax(150px,1fr)
+    );
+
+    gap:18px;
+
+}/* ==========================================================
+   CARDS DAS FIGURINHAS
+========================================================== */
+
+.sticker-card{
+
+    background:var(--branco);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:var(--transicao);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.sticker-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.sticker-image{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:contain;
+
+    background:#FFF8FC;
+
+    padding:14px;
+
+    cursor:pointer;
+
+}
+
+.sticker-info{
+
+    padding:16px;
+
+}
+
+.sticker-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--texto);
+
+    margin-bottom:14px;
+
+    text-align:center;
+
+    min-height:38px;
+
+}
+
+.sticker-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.copy-button{
+
+    flex:1;
+
+    border:none;
+
+    background:var(--rosa-escuro);
+
+    color:white;
+
+    padding:12px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:var(--transicao);
+
+}
+
+.copy-button:hover{
+
+    background:#c93b79;
+
+}
+
+.favorite-button{
+
+    width:48px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#FFEAF4;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:var(--transicao);
+
+}
+
+.favorite-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.favorite-button.active{
+
+    background:#FFD3E8;
+
+}
+
+
+
+/* ==========================================================
+   BARRA INFERIOR
+========================================================== */
+
+.bottom-navigation{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:14px 8px;
+
+    box-shadow:0 -6px 25px rgba(0,0,0,.08);
+
+    z-index:999;
+
+}
+
+.nav-button{
+
+    border:none;
+
+    background:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#777;
+
+    cursor:pointer;
+
+    transition:var(--transicao);
+
+}
+
+.nav-button span{
+
+    font-size:22px;
+
+}
+
+.nav-button small{
+
+    font-size:12px;
+
+}
+
+.nav-button.active{
+
+    color:var(--rosa-escuro);
+
+}
+
+
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:3000;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    width:100%;
+
+    max-width:420px;
+
+    background:white;
+
+    border-radius:26px;
+
+    padding:20px;
+
+    position:relative;
+
+    animation:modalOpen .25s ease;
+
+}
+
+.modal-content img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+}
+
+.modal-content h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+.close-button{
+
+    position:absolute;
+
+    right:14px;
+
+    top:14px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFE7F2;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+.modal-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.modal-actions button{
+
+    flex:1;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+}
+
+#copySticker{
+
+    background:var(--rosa-escuro);
+
+    color:white;
+
+}
+
+#favoriteSticker{
+
+    background:#FFEAF4;
+
+}
+
+
+
+/* ==========================================================
+   TOAST
+========================================================== */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:110px;
+
+    transform:translateX(-50%);
+
+    background:#333;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:999px;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.3s;
+
+    z-index:5000;
+
+}
+
+.toast.show{
+
+    opacity:1;
+
+}
+
+
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+@keyframes modalOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.92);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}/* ==========================================================
+   RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:768px){
+
+    .stickers-grid{
+
+        grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    }
+
+}
+
+@media (min-width:769px){
+
+    .stickers-grid{
+
+        grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px,1fr)
+        );
+
+    }
+
+}
+
+
+/* ==========================================================
+   TABLETS
+========================================================== */
+
+@media (min-width:1024px){
+
+    body{
+
+        max-width:1200px;
+
+        margin:auto;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--rosa);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.loading-card{
+
+    height:260px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        90deg,
+        #f7f7f7,
+        #ffffff,
+        #f7f7f7
+    );
+
+    background-size:300% 100%;
+
+    animation:loading 1.3s infinite;
+
+}
+
+@keyframes loading{
+
+    from{
+
+        background-position:100%;
+
+    }
+
+    to{
+
+        background-position:-100%;
+
+    }
+
+}
+
+
+/* ==========================================================
+   ESTADO VAZIO
+========================================================== */
+
+.empty{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.empty h2{
+
+    color:var(--rosa-escuro);
+
+    margin-bottom:15px;
+
+}
+
+.empty p{
+
+    color:#777;
+
+    line-height:1.6;
+
+}
+
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+button{
+
+    transition:.25s;
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+
+/* ==========================================================
+   IMAGENS
+========================================================== */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+input{
+
+    font-family:inherit;
+
+}
+
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/* ==========================================================
+   UTILIDADES
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.fade-in{
+
+    animation:fadeIn .35s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   FIM DO ARQUIVO
+========================================================== */
