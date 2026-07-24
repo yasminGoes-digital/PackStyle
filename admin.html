@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PackStyle Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <h1>PackStyle Admin</h1>
+
+    <p>
+        Gerador automático de stickers.json
+    </p>
+
+    <label>
+
+        Categoria
+
+    </label>
+
+    <input
+        id="categoryInput"
+        type="text"
+        placeholder="Ex.: Bom dia">
+
+    <br><br>
+
+    <label>
+
+        Selecione os PNGs
+
+    </label>
+
+    <input
+        id="filesInput"
+        type="file"
+        multiple
+        accept=".png">
+
+    <br><br>
+
+    <button id="generateButton">
+
+        Gerar JSON
+
+    </button>
+
+    <br><br>
+
+    <textarea
+        id="jsonOutput"
+        rows="18"
+        style="width:100%;">
+
+    </textarea>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
